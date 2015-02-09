@@ -1,0 +1,899 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-feb-2015, 19:25:08
+    Author     : Javier
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'limon';
+    src: url('tipografias/lemonmilk-webfont-webfont-webfont-webfont.eot');
+    src: url('tipografias/lemonmilk-webfont-webfont-webfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('tipografias/lemonmilk-webfont-webfont-webfont-webfont.woff2') format('woff2'),
+         url('tipografias/lemonmilk-webfont-webfont-webfont-webfont.woff') format('woff'),
+         url('tipografias/lemonmilk-webfont-webfont-webfont-webfont.ttf') format('truetype'),
+         url('tipografias/lemonmilk-webfont-webfont-webfont-webfont.svg#lemonmilkregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'geosans';
+    src: url('tipografias/geosanslight-webfont.eot');
+    src: url('tipografias/geosanslight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('tipografias/geosanslight-webfont.woff2') format('woff2'),
+         url('tipografias/geosanslight-webfont.woff') format('woff'),
+         url('tipografias/geosanslight-webfont.ttf') format('truetype'),
+         url('tipografias/geosanslight-webfont.svg#geosanslightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'jennar';
+    src: url('tipografias/jennasue-webfont.eot');
+    src: url('tipografias/jennasue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('tipografias/jennasue-webfont.woff2') format('woff2'),
+         url('tipografias/jennasue-webfont.woff') format('woff'),
+         url('tipografias/jennasue-webfont.ttf') format('truetype'),
+         url('tipografias/jennasue-webfont.svg#jenna_sueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'notera';
+    src: url('tipografias/notera_personaluseonly-webfont.eot');
+    src: url('tipografias/notera_personaluseonly-webfont.eot?#iefix') format('embedded-opentype'),
+         url('tipografias/notera_personaluseonly-webfont.woff2') format('woff2'),
+         url('tipografias/notera_personaluseonly-webfont.woff') format('woff'),
+         url('tipografias/notera_personaluseonly-webfont.ttf') format('truetype'),
+         url('tipografias/notera_personaluseonly-webfont.svg#notera_personal_use_onlyRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'jellyka';
+    src: url('tipografias/saint-andrews_queen-webfont.eot');
+    src: url('tipografias/saint-andrews_queen-webfont.eot?#iefix') format('embedded-opentype'),
+         url('tipografias/saint-andrews_queen-webfont.woff2') format('woff2'),
+         url('tipografias/saint-andrews_queen-webfont.woff') format('woff'),
+         url('tipografias/saint-andrews_queen-webfont.ttf') format('truetype'),
+         url('tipografias/saint-andrews_queen-webfont.svg#jellyka_saint-andrews_queenRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/***********************************************************************************************************
+*******************************  ESTILOS GENERALES  ********************************************************
+***********************************************************************************************************/
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+#contenedor{
+    height: 100%;
+}
+/***********************************************************************************************************
+*******************************  INICIO  *******************************************************************
+***********************************************************************************************************/
+#inicio{
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background:url(../img/portada2.png);
+    background-size: cover;
+    background-position: top right;
+}
+header{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    
+    font-family: 'geosans';
+    color: #f4981b;
+    font-size: 1.875em; /*30/16*/
+    min-width: 320px;
+}
+.espacio-foto{
+    flex: 2;
+}
+nav ul li{
+    display: block;
+}
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    overflow: hidden;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+}
+.icono{
+    margin-top: -45px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    transition: all 0.7s ease;
+}
+.opcion{
+    margin-top: 10px;
+    transition: all 0.7s ease;
+}
+nav ul{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: black;
+}
+#logo-portada{
+    background-color: rgba(244, 152, 27, 0.32);
+}
+#logo-portada img{
+    width: 100%;
+}
+#resto-header{
+    background-color: black;
+    flex: auto;
+}
+/***********************************************************************************************************
+*******************************  SECCIONES GENERALES  ********************************************************
+***********************************************************************************************************/
+
+.titulo-seccion{
+    text-align: center;
+    font-size: 4.5em; /*72/16*/
+    font-family: 'geosans';
+    color: #66942d;
+    margin-top: 35px;
+}
+.subtitulo-seccion{
+    text-align: center;
+    font-size: 2.9375em; /*47/16*/
+    font-family: 'geosans';
+    color: #66942d;
+    margin-top: 35px;
+}
+
+.parrafo-centrado{
+    font-family: 'geosans';
+    font-size: 1.375em; /*22/16*/
+    text-align: justify;
+    width: 69.79%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+}
+section{
+    margin-top: 50px;
+}
+/***********************************************************************************************************
+*******************************  COCINEROS  ****************************************************************
+***********************************************************************************************************/
+
+#cocineros{
+    display: flex;
+    justify-content: space-between;
+    width: 69.79%;
+    margin: 0 auto;
+}
+.cocinero{
+    flex:1;
+    font-family: 'geosans';
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cuno{
+    padding-right: 30px;
+}
+.ctres{
+    padding-left: 30px;
+}
+.cdos{
+    padding: 0 15px;
+}
+.cocinero h1, .cocinero h2, .cocinero p, .cocinero img{
+    margin-top: 30px;
+    display: block;
+}
+.cocinero .foto-cocinero{
+    width: 100%;
+}
+.cocinero .icono-cocinero{
+    width: 30.67%; /*92/300*/
+}
+.cocinero h1{
+    font-size: 2.5em; /*40/16*/
+    text-align: center;
+    color: #66942d
+}
+.cocinero p:not(.cita-cocinero){
+    font-size: 1.375em;/*22/16*/
+    text-align: justify;
+    display: block;
+}
+.cocinero h2{
+    text-align: center;
+}
+.firma-uno{
+    font-family: 'jennar';
+    font-size: 2.5em;/*40/16*/
+}
+.firma-dos{
+    font-family: 'notera';
+    font-size: 2.5em;/*40/16*/
+}
+.firma-tres{
+    font-family: 'jellyka';
+    font-size: 2.5em;/*40/16*/
+}
+.icono-cocinero{
+    display: block;
+    margin: 0 auto;
+}
+
+.cita-cocinero{
+    font-size: 1.625em; /*26/16*/
+    text-align: center;
+    font-style: italic;
+}
+/***********************************************************************************************************
+*******************************  PRODUCTOS  ****************************************************************
+***********************************************************************************************************/
+
+.foto-productos{
+    display: block;
+    width: 12.6%; /* 242/1920 */
+    margin: 30px auto;
+}
+
+.naranja{
+    color: #c9521a;
+}
+/***********************************************************************************************************
+*******************************  LOCALIZACIÓN  *************************************************************
+***********************************************************************************************************/
+#mapa{
+    height: 315px;
+    margin-top: 40px;
+    background-color: #e05757;
+}
+#localizacion{
+    width: 70%;
+    margin: 0 auto;
+}
+#localizador{
+    background-color: #202020;
+    color: #66942d;
+}
+#direccion{
+    flex: 1;
+    font-size: 1.5625em;/*25/16*/
+    font-family: 'geosans';
+    line-height: 80px;
+}
+.centrado-input{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+#campo-mapa{
+    padding: 8px 8px;
+    font-size: 1.375em;
+    color: #66942d;
+    flex: 1;
+    border-radius: 7px 0 0 7px;
+}
+#buscador{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0 20px;
+}
+#buscar{
+    color: white;
+    display: inline-block;
+    width: 66px;
+    height: 46px;
+    border: 0px;
+    font-size: 1.0625em;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    background-color: #66942d;
+    border-radius: 0 7px 7px 0;
+    background: rgb(82, 128, 25);
+    background: -moz-linear-gradient(90deg, rgb(82, 128, 25) 30%, rgb(102, 148, 45) 70%);
+    background: -webkit-linear-gradient(90deg, rgb(82, 128, 25) 30%, rgb(102, 148, 45) 70%);
+    background: -o-linear-gradient(90deg, rgb(82, 128, 25) 30%, rgb(102, 148, 45) 70%);
+    background: -ms-linear-gradient(90deg, rgb(82, 128, 25) 30%, rgb(102, 148, 45) 70%);
+    background: linear-gradient(0deg, rgb(82, 128, 25) 30%, rgb(102, 148, 45) 70%);
+}
+/***********************************************************************************************************
+*******************************  PIE  **********************************************************************
+***********************************************************************************************************/
+#pie{
+    height: 100px;
+    line-height: 100px;
+    background-color: #202020;
+}
+/***********************************************************************************************************
+*******************************  CONTACTO  *****************************************************************
+***********************************************************************************************************/
+#centrado-contacto{
+    width: 55.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.forma-contacto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 3.125em; /*50/16*/
+    font-family: 'geosans';
+    color: #353535;
+    width: 48%;
+    min-width: 400px;
+}
+.dato-contacto{
+    padding-left: 20px;
+}
+.forma-contacto:nth-child(2) .dato-contacto {
+    text-align: right;
+    padding-right: 20px;
+}
+.datos-contacto img{
+    min-width: 80px;
+    width: 80px;
+}
+.datos-contacto .dato-contacto{
+    flex: 1;
+}
+.datos-contacto{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+/*********animaciones*********************************************/
+.menu:hover .icono{
+    margin-top: 0px;
+}
+.menu .icono img{
+    height: 30px;
+}
+.menu:hover .opcion{
+    color: rgba(32, 32, 32, 0);
+}
+/***********************************************************************************************************
+*******************************  PLATOS  *******************************************************************
+***********************************************************************************************************/
+
+#platos{
+    width: 69.79%;
+    margin: 0 auto;
+}
+#galeria-platos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    min-height: 300px;
+}
+.plato-principal{
+    flex: 1;
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    min-width: 250px;
+    min-height: 250px;
+    margin: 10px;
+}
+.info-plato{
+    background-color: #cc5050;
+    font-family: 'geosans';
+    text-align: center;
+    color: white;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info-plato p{
+    padding: 6% 12%;
+}
+.plato1 .foto-plato{
+    background-image: url(../img/comida1.png);
+}
+.plato2 .foto-plato{
+    background-image: url(../img/comida4.png);
+}
+.plato3 .foto-plato{
+    background-image: url(../img/comida3.png);
+}
+.plato4 .foto-plato{
+    background-image: url(../img/japon.jpg);
+    background-position: center;
+}
+.plato5 .foto-plato{
+    background-image: url(../img/Tempura.jpg);
+    background-position: center;
+}
+.plato6 .foto-plato{
+    background-image: url(../img/verde.jpg);
+    background-position: center;
+}
+.plato7 .foto-plato{
+    background-image: url(../img/thai.jpg);
+    background-position: center;
+}
+.plato8 .foto-plato{
+    background-image: url(../img/salmon.jpg);
+    background-position: center;
+}
+.plato1 .info-plato{
+    background-color: #7e4c2d;
+}
+.plato2 .info-plato{
+    background-color: #f09d60;
+}
+.plato3 .info-plato{
+    background-color: #e8de65;
+}
+.plato4 .info-plato{
+    background-color: #e64747;
+}
+.plato5 .info-plato{
+    background-color: rgb(136, 177, 85);
+}
+.plato6 .info-plato{
+    background-color: rgb(111, 203, 160);
+}
+.plato7 .info-plato{
+    background-color: rgb(214, 173, 60);
+}
+.plato8 .info-plato{
+    background-color: rgb(245, 98, 98);
+}
+.info-plato h3{
+    border-bottom: 1px solid white;
+    font-size: 2.5em;/*40/16*/
+}
+.foto-plato{
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.foto-plato, .info-plato{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.info-plato{
+    transform: rotateY(-180deg);
+}
+.plato-principal{
+    position: relative;
+    transition: all 1s ease;
+    transform: perspective(2200px);
+    transform-origin: 100% 50%;
+    transform-style: preserve-3d;
+}
+.plato-principal:hover{
+    transform: perspective(2200px) rotateY(-180deg) translateX(100%);
+}
+.blanco{
+    text-align: center;
+    color: white;
+}
+/***********************************************************************************************************
+************************************************************************************************************
+***********************************************************************************************************/
+
+
+@media(max-width:1800px){
+    nav ul{
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    #localizacion{
+        width: 100%;
+    }
+    #centrado-contacto{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .dato-contacto{
+        padding-left: 20px;
+        padding-right: 0;
+    }
+    .forma-contacto:nth-child(2) .dato-contacto {
+        order: 2;
+        text-align: left;
+        padding-right: 0;
+    }
+}
+
+@media(max-width:1100px){
+    #cocineros{
+        justify-content: space-between;
+        flex-direction: column;
+        width: 80%;
+    }
+    .cocinero{
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cuno{
+        padding-right: 0;
+        order: 2;
+    }
+    .ctres{
+        padding-left: 0;
+        order: 3;
+    }
+    .cdos{
+        padding: 0;
+        order: 1;
+    }
+    .cocinero .foto-cocinero{
+        width: 50%;
+    }
+    .cocinero .icono-cocinero{
+        width: 15%;
+    }
+    .cdos .foto-cocinero{
+        order: 4;
+    }
+    .cdos .titulo-cocinero{
+        order: 1;
+    }
+    .cdos .parrafo-cocinero{
+        order: 3;
+    }
+    .cdos .icono-cocinero{
+        order: 2
+    }
+    .cdos .cita-cocinero{
+        order: 5;
+    }
+    .firma-dos{
+        order: 6;
+    }
+    /************************************************
+    #centrado-contacto{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .dato-contacto{
+        padding-left: 20px;
+        padding-right: 0;
+    }
+    .forma-contacto:nth-child(2) .dato-contacto {
+        order: 2;
+        text-align: left;
+        padding-right: 0;
+    }
+    **************************************************/
+
+    .parrafo-centrado{
+        font-family: 'geosans';
+        font-size: 1.375em; /*22/16*/
+        text-align: justify;
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+
+    }
+    section{
+        margin-top: 50px;
+    }
+    #platos{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+/*
+@media (max-width: 767px) {
+
+    header{
+        flex: 1;
+        display: flex;
+        height: 100%;
+        font-family: 'geosans';
+        color: #f4981b;
+        font-size: 1.875em;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .espacio-foto{
+        flex: 0;
+    }
+    nav ul li{
+        display: block;
+        flex: none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: inherit;
+        padding: 10px;
+        overflow: hidden;
+        display: block;
+        height: 35px;
+        line-height: 35px;
+    }
+    .icono{
+        margin-top: -45px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        transition: all 0.7s ease;
+    }
+    .opcion{
+        margin-top: 10px;
+        transition: all 0.7s ease;
+    }
+    nav ul{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: black;
+    }
+    #logo-portada{
+
+        background-color: rgba(244, 152, 27, 0.32);
+    }
+    #logo-portada img{
+        width: 100%;
+    }
+    #resto-header{
+        background-color: transparent;
+        flex: auto;
+    }
+}*/
+@media (max-device-width:749px) and (orientation: portrait) {
+    body{
+        font-size: 25px;
+    }
+    #inicio{
+        background-image: url(../img/portada3.png);
+        background-position: center;
+    }
+     header{
+        flex: 1;
+        display: flex;
+        height: 100%;
+        font-family: 'geosans';
+        color: #f4981b;
+        font-size: 1.875em;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .espacio-foto{
+        flex: 0;
+    }
+    nav ul li{
+        /*overflow: hidden;*/
+        display: block;
+        flex: none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: inherit;
+        padding: 10px;
+        overflow: hidden;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+    }
+    .icono{
+        margin-top: 0;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        transition: all 0.7s ease;
+    }
+    .opcion{
+        margin-top: 0;
+        transition: all 0.7s ease;
+        margin-left: 20px;
+    }
+    nav ul{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: black;
+    }
+    #logo-portada{
+        background-color: rgba(244, 152, 27, 0.32);
+    }
+    #logo-portada img{
+        width: 100%;
+    }
+    #resto-header{
+        background-color: transparent;
+        flex: auto;
+    }
+    #menu-movil{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: hidden;
+    }
+    .menu-cerrado{
+        width: 20%;
+        height: 100%;
+        background-image: url(../img/menu24.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 0.25s ease;
+        
+    }
+    .menu-abierto{
+        background-image: url(../img/cross106.png);
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(-360deg);
+    }
+    nav ul{
+        display: none;
+    }
+    .icono{
+        
+    }
+    nav{
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    #galeria-platos{
+        flex-direction: column;
+        
+    }
+    .plato-principal{
+        height: 500px;        
+    }
+    /******************************/
+    #mapa{
+    height: 615px;
+    }
+    .abrir{
+        display: block;
+    }
+    .menu:nth-child(4){
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .menu:nth-child(3){
+        background-color: rgba(52, 52, 52, 0.7);
+    }
+    .menu:nth-child(2){
+        background-color: rgba(109, 109, 109, 0.7);
+    }
+    .menu:nth-child(1){
+        background-color: rgba(139, 139, 139, 0.7);
+    }
+    .menu-enlace{
+        display: flex;
+        justify-content: center;
+    }
+    .menu:hover .icono{
+        margin-top: 0px;
+    }
+    .menu .icono img{
+        height: 40px;
+    }
+    .menu:hover .opcion{
+        color: #f4981b
+    }
+}
+@media (max-device-width:749px) and (orientation: landscape){
+    #inicio{
+        background-image: url(../img/portada2.png);
+        background-position: cover;
+    }
+    #mapa{
+        height: 315px;
+    }
+}

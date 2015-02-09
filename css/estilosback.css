@@ -1,0 +1,205 @@
+html, body{
+    height: 100%;
+    background-color: #e2e2e2;
+}
+#superposicion{
+    position: fixed;
+    background-color: rgba(71, 77, 82, 0.49);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#panel-gestion{
+    background-color: #389cdb;
+    width: 600px;
+    margin: 0 auto;
+-webkit-box-shadow: 4px 4px 25px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    4px 4px 25px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         4px 4px 25px 0px rgba(50, 50, 50, 0.75);
+}
+.cerrar-ventana{
+    margin-top: -15px;
+    margin-left: -15px;
+    background-color: rgb(212, 5, 5);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+}
+.oculto{
+    visibility: hidden;
+}
+.borrado{
+    display:none;
+}
+#confirmacion{
+     background-color: #389cdb;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+-webkit-box-shadow: 4px 4px 25px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    4px 4px 25px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         4px 4px 25px 0px rgba(50, 50, 50, 0.75);
+}
+.minifoto{
+    height: 100px;
+    margin: 3px;
+}
+#img-carga{
+    position: relative;
+    display: block;
+    width: 100px;
+    margin: 100px auto;
+    z-index: 1100;
+}
+#tabla{
+    margin: 0 auto;
+    background-color: rgb(17, 42, 83);
+    color: white;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    width: 900px;
+    text-align: center;
+}
+#tabla td, #tabla th{
+    padding: 10px;
+}
+#tabla tr{
+    border-bottom: 1px solid #389cdb;
+}
+#tabla tr:nth-child(2n+2){
+    background-color: rgb(7, 18, 36);
+}
+.enlace-eliminar{
+    color: rgb(230, 230, 230);
+font-size: 14px;
+padding: 5px 14px;
+text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+border-radius: 7px;
+background: rgb(210, 20, 20);
+background: -moz-linear-gradient(90deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 70%);
+background: -webkit-linear-gradient(90deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 70%);
+background: -o-linear-gradient(90deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 70%);
+background: -ms-linear-gradient(90deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 70%);
+background: linear-gradient(0deg, rgb(210, 20, 20) 30%, rgb(250, 20, 20) 70%);
+-webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+}
+.enlace-modificar{
+    color: rgb(230, 230, 230);
+font-size: 14px;
+padding: 5px 14px;
+text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+border-radius: 7px;
+background: rgb(30, 80, 170);
+background: -moz-linear-gradient(90deg, rgb(30, 80, 170) 30%, rgb(40, 101, 199) 70%);
+background: -webkit-linear-gradient(90deg, rgb(30, 80, 170) 30%, rgb(40, 101, 199) 70%);
+background: -o-linear-gradient(90deg, rgb(30, 80, 170) 30%, rgb(40, 101, 199) 70%);
+background: -ms-linear-gradient(90deg, rgb(30, 80, 170) 30%, rgb(40, 101, 199) 70%);
+background: linear-gradient(0deg, rgb(30, 80, 170) 30%, rgb(40, 101, 199) 70%);
+-webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+}
+.paginacion{
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+}
+.paginacion a{
+    flex: 1;
+    text-align: center;
+    color: white;
+    
+    padding: 5px;
+    margin: 3px;
+    border-radius: 3px;
+}
+.enlace{
+background-color: #3e6095;
+}
+.actual{
+    background-color: #7598d0;
+}
+
+#btn-insertar{
+    display: inline-block;
+    margin: 10px auto;
+    color: rgb(230, 230, 230);
+font-size: 20px;
+padding: 20px;
+text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+background: rgb(26, 140, 45);
+background: -moz-linear-gradient(90deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+background: -webkit-linear-gradient(90deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+background: -o-linear-gradient(90deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+background: -ms-linear-gradient(90deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+background: linear-gradient(0deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+-webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+}
+.thumb{
+    height: 100px;
+}
+#btn-ok, #btn-confirmar{
+    display: block;
+    width: 50%;
+    background-color: rgb(73, 163, 88);
+    padding: 10px 0;
+    float: right;
+    text-align: center;
+    color: white;
+}
+#btn-no, #btn-cancelar{
+    display: block;
+    width: 50%;
+    background-color: rgb(210, 20, 20);
+    padding: 10px 0;
+    float: left;
+    margin-top: 0;
+    margin-left: 0;
+    height: auto;
+    line-height:normal;
+    text-align: center;
+    border-radius: 0;
+    border: 0px;
+    color: white;
+}
+#btn-login{
+    display: block;
+    margin: 10px auto;
+    color: rgb(230, 230, 230);
+    font-size: 20px;
+    padding: 6px;
+    text-align: center;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: rgb(26, 140, 45);
+    background: -moz-linear-gradient(90deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+    background: -webkit-linear-gradient(90deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+    background: -o-linear-gradient(90deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+    background: -ms-linear-gradient(90deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+    background: linear-gradient(0deg, rgb(26, 140, 45) 30%, rgb(20, 120, 35) 70%);
+    -webkit-box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 2px 1px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 2px 1px rgba(50, 50, 50, 0.75);
+}
