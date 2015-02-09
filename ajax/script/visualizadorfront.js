@@ -24,7 +24,7 @@ function mostrarGaleria(datos){
     var galeria = $("#galeria-platos");
     galeria.empty();
     for (var i=0 in datos.platos) {
-        $("<div class='plato-principal plato1'><div class='foto-plato' style='background-image: url(imagenes/"+datos.platos[i].fotos[0]+")'></div><div class='info-plato'><h3>"+datos.platos[i].nombre+"</h3><p>"+datos.platos[i].descripcion+"</p></div></div>").appendTo(galeria);
+        $("<div class='plato-principal plato1'><div class='foto-plato' style='background-image: url(imagenes/"+datos.platos[i].fotos[0]+")'></div><div class='info-plato'><h3>"+datos.platos[i].nombre+"</h3><p>"+datos.platos[i].descripcion+" a un precio de "+datos.platos[i].precio+"€</p></div></div>").appendTo(galeria);
     }
          $(".paginacion").remove();
     var tr = document.createElement("div");

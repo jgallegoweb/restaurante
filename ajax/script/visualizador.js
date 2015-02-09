@@ -167,20 +167,19 @@ function modificarPlatos(){
     });
 }
 function insertarPlato() {
-    /*var imagenes = document.getElementById("archivos");
-    imagenes = imagenes.files.length;*/
-    imagenes = $(".minifoto").length;
+    var imagenes = document.getElementById("archivos");
+    imagenes = imagenes.files.length;
+    /*imagenes = $(".minifoto").length;*/
     if(imagenes<3){
         alert("minimo de fotos: 3");
         return false;
     }
     datosform = new FormData($("#formulario")[0]);
-    alert(imagenes);
+    
     $.ajax({
         url: '../ajax/insertPlato.php',
         type: 'POST',
         data: datosform,
-        /*async: false,*/
         cache: false,
         contentType: false,
         processData: false,
@@ -195,7 +194,7 @@ function insertarPlato() {
             cerrarVentana();
         },
         error: function (e, a) {
-            alert(a);
+           // alert(a);
         }
     });
 }
@@ -208,7 +207,7 @@ function llamadaPlatos(){
 }
 
 function borrarPlato(x){
-    alert(x.data("nombre"));
+    //alert(x.data("nombre"));
     $.ajax({
         url: '../ajax/deletePlato.php',
         type: 'POST',
@@ -221,7 +220,7 @@ function borrarPlato(x){
         },
         success: function(datos){
             cargarPlatos();
-            alert(datos.error);
+            //alert(datos.error);
         },
         error: function (){
             alert("adios");
@@ -229,7 +228,7 @@ function borrarPlato(x){
     });
 }
 function borrarFoto(){
-    alert("ok");
+    //alert("ok");
     $.ajax({
         url: '../ajax/deleteFoto.php',
         type: 'POST',
@@ -242,7 +241,7 @@ function borrarFoto(){
         },
         success: function(datos){
             cargarPlatos();
-            alert(datos.error);
+            //alert(datos.error);
         },
         error: function (){
             alert("adios");
